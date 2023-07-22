@@ -1,0 +1,11 @@
+#Ant properties
+#Tue Apr 04 10:21:15 CEST 2023
+version.api=2211
+vendor=hybris
+group.id=de.hybris.platform
+name=hmstorefront
+description=hmstorefront
+builddate=20230404 1020
+releasedate=20230309 2009
+version=2211.5
+module.name=platform-module
