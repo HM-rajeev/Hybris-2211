@@ -86,7 +86,7 @@ tmp/
 **/build.xml
 **/eclipsebin
 **/classes
-**/gensrc/**
+**/gensrc
 **/platformhome.properties
 **/extensioninfo.xsd
 **/testclasses$
