@@ -1,4 +1,9 @@
+
 # For generated extensions
+config/orbeon/config/properti
+config/tomcat/conf/catalina.p
+config/tomcat/conf/server.xml
+
 /hybris_2211/hybris/bin/custom/**/.classpath
 /hybris_2211/hybris/bin/custom/**/.classpath.bak
 /hybris_2211/hybris/bin/custom/**/.settings
@@ -23,7 +28,7 @@ base.properties
  
 
 # Package Files #
-#*.jar
+*.jar
 *.war
 *.ear
 
@@ -81,7 +86,7 @@ tmp/
 **/build.xml
 **/eclipsebin
 **/classes
-**/gensrc
+**/gensrc/**
 **/platformhome.properties
 **/extensioninfo.xsd
 **/testclasses$
@@ -93,7 +98,7 @@ tmp/
 **/lib/.lastupdate
 **/*-testclasses.xml
 **/*-webtestclasses.xml
-**/jalo
+**/jalo/**
 
  
 
