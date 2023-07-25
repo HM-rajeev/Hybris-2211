@@ -8,7 +8,7 @@ config/tomcat/conf/server.xml
 /hybris_2211/hybris/bin/custom/**/.classpath.bak
 /hybris_2211/hybris/bin/custom/**/.settings
 # Filename patterns to ignore
-Generated*.java
+**/Generated*.java
 *testclasses.xml
 *hmc.jar
 ruleset.xml
