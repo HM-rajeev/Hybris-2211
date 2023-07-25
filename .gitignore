@@ -43,3 +43,4 @@ base.properties
 **/tags/addons
 **/messages/addons
 *_bof.jar
+**/.springBeans*
