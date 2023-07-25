@@ -1,53 +1,91 @@
-# Folders to ignore, whatever the place they are
- 
-.metadata
-classes
-hybris/bin/**/bin
-gensrc
- 
-# Folders to ignore at the root of the repository
-log/
-temp/
-data/
-licenses/
-hybris/sampleconfigurations/
+########################
+# Java generated files #
+########################
+*.class
+*.ear
+*.jar
+*.war
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-  
-# filter only custom extension
+##########
+# Hybris #
+##########
 bin/*
 !bin/custom/
- 
-# Absolute path to ignore
-config/local.properties
- 
-# Filename patterns to ignore
-*.class
+gensrc/
+jalo/
 build.xml
-Generated*.java
-platformhome.properties
-*testclasses.xml
-extensioninfo.xsd
-*hmc.jar
+velocity.log
 hmc.xsd
-items.xsd
 beans.xsd
+items.xsd
+extensioninfo.xsd
+platformhome.properties
+*-testclasses.xml
+*webtestclasses.xml
 ruleset.xml
-*.log
-base.properties
+classes/
+testreport/
 
+###############
+# Hybris Data #
+###############
+data
+log
+lib
+roles
+temp
 
-#  Addon specific copy folders
-**/_ui/addons
-**/views/addons
-**/tld/addons
-**/tags/addons
-**/messages/addons
-*_bof.jar
-**/.springBeans*
-**/.classpath
+#########################
+# Maven generated files #
+#########################
+target/
 
-**/config/properties-common.xml
-**/tomcat
+######################
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
 
-**/hmbackoffice/.classpath
-**/hmbackoffice/.project
+#################
+# Editors Files #
+#################
+.classpath
+.vscode
+*.sublime-project
+*.sublime-workspace
+.project
+.settings
+eclipsebin
+.idea
+idea-module-files/
+.externalToolBuilders
+.springBeans
+.pmd
+
+##############
+# Diff Files #
+##############
+*.orig
+
+######################
+# Editing temp files #
+######################
+*~
+*#
+
+###########################
+# Other unnecessary files #
+###########################
+.svn
+.env
+build
+.sonar
+
+##############
+# Exceptions #
+##############
+# !xxx.jar
