@@ -44,6 +44,4 @@ base.properties
 **/messages/addons
 *_bof.jar
 **/.springBeans*
-/hybris_2211/hybris/bin/custom/**/.classpath
-/hybris_2211/hybris/bin/custom/**/.classpath.bak
-/hybris_2211/hybris/bin/custom/**/.settings
+**/.classpath
