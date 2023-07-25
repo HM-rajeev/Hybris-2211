@@ -65,6 +65,8 @@ idea-module-files/
 .externalToolBuilders
 .springBeans
 .pmd
+.springBeans*
+.classpath.bak*
 
 ##############
 # Diff Files #
