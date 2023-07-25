@@ -99,6 +99,8 @@ tmp/
 **/*-testclasses.xml
 **/*-webtestclasses.xml
 **/jalo/**
+**/jalo/*
+
 
  
 
