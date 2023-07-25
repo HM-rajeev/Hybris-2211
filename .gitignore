@@ -91,6 +91,7 @@ tmp/
 **/gensrc
 **/gensrc/**
 **/gensrc/*
+**/gensrc/
 **/platformhome.properties
 **/extensioninfo.xsd
 **/testclasses$
