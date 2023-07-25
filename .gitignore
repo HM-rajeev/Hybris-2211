@@ -1,117 +1,40 @@
+# Folders to ignore, whatever the place they are
+ 
+.metadata
+classes
+hybris/bin/**/bin
+gensrc
+ 
+# Folders to ignore at the root of the repository
+log/
+temp/
+data/
+licenses/
+hybris/sampleconfigurations/
 
-# For generated extensions
-config/orbeon/config/properti
-config/tomcat/conf/catalina.p
-config/tomcat/conf/server.xml
-
-/hybris_2211/hybris/bin/custom/**/.classpath
-/hybris_2211/hybris/bin/custom/**/.classpath.bak
-/hybris_2211/hybris/bin/custom/**/.settings
+  
+# filter only custom extension
+bin/*
+!bin/custom/
+ 
+# Absolute path to ignore
+config/local.properties
+ 
 # Filename patterns to ignore
-**/Generated*.java
+*.class
+build.xml
+Generated*.java
+platformhome.properties
 *testclasses.xml
+extensioninfo.xsd
 *hmc.jar
+hmc.xsd
+items.xsd
+beans.xsd
 ruleset.xml
 *.log
 base.properties
-*.project
 
-
- 
-
-*.gem
-*.rbc
-.bundle
-.config
-.yardoc
-**/.idea/*
-**/eclipsebin/*
-
- 
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
- 
-
-### Java template
-*.class
-
- 
-
-### Eclipse template
-
- 
-
-.metadata
-tmp/
-/hybris_2211/tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-#.settings/
-.loadpath
-.recommenders
-
- 
-
-# Eclipse Core
-.project
-
- 
-
-# External tool builders
-#.externalToolBuilders/
-
- 
-
-# Workspace
-/workspace
-/hybris_2211/workspace
-
- 
-
-## Plugin-specific files:
-
- 
-
-# IntelliJ
-/hybris_2211/out/
-
- 
-
-#**/generatedVariables.js
-#**/generatedVariables.tag
-**/build.xml
-**/eclipsebin
-**/classes
-**/gensrc
-**/gensrc/**
-**/gensrc/*
-**/gensrc/
-**/platformhome.properties
-**/extensioninfo.xsd
-**/testclasses$
-**/hmc/bin
-**/resources/beans.xsd
-**/resources/hmc.xsd
-**/resources/items.xsd
-**/lib/*.jar
-**/lib/.lastupdate
-**/*-testclasses.xml
-**/*-webtestclasses.xml
-**/jalo/**
-**/jalo/*
-**/jalo/
-**/.springBeans*
-**/Generated*
-
-
-
- 
 
 #  Addon specific copy folders
 **/_ui/addons
@@ -119,13 +42,4 @@ tmp/
 **/tld/addons
 **/tags/addons
 **/messages/addons
-**/lib/addons
-**/web/addonsrc
-**/_ui-src/addons
-**/web/addontestsrc
-**/web/commonwebsrc/*/
-**/web/webroot/WEB-INF/lib/addon-*
-wro_addons.xml
-
-
-has context menu
+*_bof.jar
