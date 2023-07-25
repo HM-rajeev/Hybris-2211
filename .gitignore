@@ -57,7 +57,7 @@ tmp/
  
 
 # Eclipse Core
-#.project
+.project
 
  
 
@@ -100,6 +100,10 @@ tmp/
 **/*-webtestclasses.xml
 **/jalo/**
 **/jalo/*
+**/jalo/
+**/.springBeans*
+**/Generated*
+
 
 
  
