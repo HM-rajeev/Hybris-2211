@@ -78,7 +78,7 @@
     <extension name='merchandisingcmswebservices' />
     <extension name='merchandisingservices' />
     <extension name='merchandisingservicesbackoffice' />
-    <extension name='merchandisingsmartedit' />
+   <!-- <extension name='merchandisingsmartedit' /> -->
     <extension name='merchandisingstorefrontsampledataaddon' />
     <extension name='chinesecommercewebservicescommons' />
     <extension name='chineseaddressaddon' />
@@ -155,7 +155,7 @@
     <extension name='ticketsystembackoffice' />
     <extension name='datahubadapter' />
     <extension name='datahubclient' />
-    <extension name='dataimportcommons' />
+    <extension name='dataimportcommons' /> 
     <extension name='entitlementbackoffice' />
     <extension name='entitlementfacades' />
     <extension name='entitlementservices' />
@@ -182,7 +182,7 @@
     <extension name='notificationfacades' />
     <extension name='notificationocc' />
     <extension name='notificationservices' />
-    <extension name='npmancillary' />
+    <extension name='npmancillary' /> 
     <extension name='b2bordermanagementfacades' />
     <extension name='b2bordermanagementwebservices' />
     <extension name='ordermanagementaddon' />
@@ -193,7 +193,7 @@
     <extension name='warehousingbackoffice' />
     <extension name='warehousingfacades' />
     <extension name='warehousingwebservices' />
-    <!--<extension name='yacceleratorordermanagement' /> -->
+  <!-- <extension name='yacceleratorordermanagement' /> -->
     <extension name='personalizationcms' />
     <extension name='personalizationcmsbackoffice' />
     <extension name='personalizationcmsweb' />
@@ -203,7 +203,7 @@
     <extension name='personalizationsampledataaddon' />
     <extension name='personalizationservices' />
     <extension name='personalizationservicesbackoffice' />
-    <extension name='personalizationsmartedit' />
+   <!-- <extension name='personalizationsmartedit' /> -->
     <extension name='personalizationwebservices' />
     <extension name='previewpersonalizationweb' />
     <extension name='personalizationaddon' />
@@ -212,12 +212,12 @@
     <extension name='personalizationpromotions' />
     <extension name='personalizationpromotionsbackoffice' />
     <extension name='personalizationpromotionssampledataaddon' />
-    <extension name='personalizationpromotionssmartedit' />
+   <!-- <extension name='personalizationpromotionssmartedit' /> -->
     <extension name='personalizationpromotionsweb' />
     <extension name='personalizationsearch' />
     <extension name='personalizationsearchbackoffice' />
     <extension name='personalizationsearchsamplesaddon' />
-    <extension name='personalizationsearchsmartedit' />
+    <!--<extension name='personalizationsearchsmartedit' /> -->
     <extension name='personalizationsearchweb' />
     <extension name='adminapi' />
     <extension name='alluicommons' />
@@ -256,12 +256,12 @@
     <extension name='selectivecartfacades' />
     <extension name='selectivecartservices' />
     <extension name='selectivecartsplitlistaddon' />
-    <extension name='cmssmartedit' />
+   <!-- <extension name='cmssmartedit' /> 
     <extension name='cmssmarteditwebservices' />
     <extension name='smartedit' />
     <extension name='smarteditaddon' />
     <extension name='smartedittools' />
-    <extension name='smarteditwebservices' />
+    <extension name='smarteditwebservices' /> -->
     <extension name='stocknotificationaddon' />
     <extension name='stocknotificationfacades' />
     <extension name='stocknotificationservices' />
@@ -284,7 +284,7 @@
     <extension name='timedaccesspromotionenginefacades' />
     <extension name='timedaccesspromotionengineocc' />
     <extension name='timedaccesspromotionenginesamplesaddon' />
-    <extension name='timedaccesspromotionengineservices' />
+    <extension name='timedaccesspromotionengineservices' /> 
     <extension name='cms2' />
     <extension name='cms2lib' />
     <extension name='cmsbackoffice' />
