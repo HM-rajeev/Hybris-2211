@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="eclipsebin/classes" path="src"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="gensrc"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
+	<classpathentry kind="src" path="acceleratoraddon/web/src"/>
+	<classpathentry kind="src" path="acceleratoraddon/web/webroot/WEB-INF/views"/>
+	<classpathentry kind="src" path="acceleratoraddon/web/webroot/WEB-INF/tags"/>
+	<classpathentry kind="src" path="acceleratoraddon/web/webroot/WEB-INF/tld"/>
+	<classpathentry kind="lib" path="acceleratoraddon/web/webroot/WEB-INF/messages"/>
+	<classpathentry exported="true" kind="lib" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/platform"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/addonsupport"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/acceleratorstorefrontcommons"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adaptivesearchsamplesaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/assistedservicecustomerinterestsaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/assistedservicepromotionaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/assistedservicestorefront"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/assistedserviceyprofileaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/commerceorgaddon"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/AuthenticationSdk-0.0.21.jar"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/cybersource-rest-client-java-0.0.42.jar"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/logging-interceptor-3.14.4.jar"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/okhttp-3.14.4.jar"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/okio-1.17.2.jar"/>
+	<classpathentry kind="lib" path="C:/Softwares/cybersourcejar/SampleApiClient-0.0.5.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hmfulfilmentprocess"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+</classpath>

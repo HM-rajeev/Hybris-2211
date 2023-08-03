@@ -313,5 +313,7 @@
 	<extension name='hminitialdata' />
 	<extension name='hmtest' />
 	<extension name='hmstorefront' />
+	
+	<extension name='hmcybersourcestorefrontaddon'/>
   </extensions>
 </hybrisconfig>

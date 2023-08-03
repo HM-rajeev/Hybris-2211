@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Mar 02 16:19:47 CET 2022
+version.api=1905
+vendor=hybris
+group.id=de.hybris.platform
+name=hmcybersourcestorefrontaddon
+description=hmcybersourcestorefrontaddon
+builddate=20220302 1616
+releasedate=20190628 1509
+version=1905.40
+module.name=platform-module
