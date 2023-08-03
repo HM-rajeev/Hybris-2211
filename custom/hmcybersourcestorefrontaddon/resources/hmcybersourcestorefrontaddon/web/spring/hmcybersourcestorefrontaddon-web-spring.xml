@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.hm.controllers" />
+
+	<!-- Expose /acceleratoraddon/web/webroot/WEB-INF/messages/base.js.properties  resource bundle as javascript variables -->
+	<bean
+		id="defaultHmcybersourcestorefrontaddonJavaScriptMessageResourceAccessor" parent="abstractJavaScriptMessageResourceAccessor">
+		<property name="addOnName" value="hmcybersourcestorefrontaddon" />
+	</bean>
+
+	<bean
+		id="defaultHmcybersourcestorefrontaddonBeforeViewJsPropsHandlerAdaptee" parent="abstractBeforeViewJsPropsHandlerAdaptee" class="de.hybris.platform.addonsupport.interceptors.ExportJsPropertiesBeforeViewHandler">
+		<property name="messageSource" ref="defaultHmcybersourcestorefrontaddonJavaScriptMessageResourceAccessor" />
+	</bean>
+
+	<bean id="getHmcybersourcestorefrontaddonBeforeViewHandler"	parent="beforeViewHandlerAdapter">
+		<property name="adaptee">
+			<ref bean="defaultHmcybersourcestorefrontaddonBeforeViewJsPropsHandlerAdaptee" />
+		</property>
+	</bean>
+	<bean id="HmcybersourcestorefrontaddonBeforeViewHandlerListMergeDirective" depends-on="beforeViewHandlersList" parent="listMergeDirective">
+		<property name="add" ref="getHmcybersourcestorefrontaddonBeforeViewHandler" />
+	</bean>
+
+	<!-- Redirects -->
+
+	<bean id="REDIRECT_TO_PAYMENT_METHOD" class="java.lang.String">
+		<constructor-arg value="redirect:/checkout/multi/hm/payment-method/add" />
+	</bean>
+
+	<bean id="REDIRECT_TO_SUMMARY" class="java.lang.String">
+		<constructor-arg value="redirect:/checkout/multi/hm/summary/view" />
+	</bean>
+	
+	<bean id="hmSopMockUrlValidator" class="com.hm.validation.HmSopMockUrlValidator">		
+	</bean>
+	
+	<bean id="hmSopPaymentDetailsValidator" class="com.hm.validation.HmSopPaymentDetailsValidator">		
+	</bean>
+	
+	<!-- Facades Integration -->
+    
+    <bean id="hmPaymentFacade" class="com.hm.facades.impl.HmDefaultPaymentFacade" >
+		<property name="baseSiteService" ref="baseSiteService"/>
+		<property name="hmPaymentService" ref="hmPaymentService"/>
+		<property name="checkoutCustomerStrategy" ref="checkoutCustomerStrategy"/>
+		<property name="hmCustomerAccountService" ref="hmCustomerAccountService"/>
+		<property name="siteBaseUrlResolutionService" ref="siteBaseUrlResolutionService"/>		
+		<property name="paymentSubscriptionResultDataConverter" ref="paymentSubscriptionResultDataConverter"/>				
+	</bean>
+	
+	<bean id="hmCheckoutFacade" class="com.hm.facades.impl.HmDefaultCheckoutFacade" >
+		<property name="cartService" ref="cartService"/>
+		<property name="cartFacade" ref="cartFacade"/>
+		<property name="checkoutCustomerStrategy" ref="checkoutCustomerStrategy"/>
+		<property name="hmCommerceCheckoutService" ref="hmCommerceCheckoutService"/>						
+	</bean>
+	
+	<!-- End Facades Integration -->
+		
+	<!-- Service Integration -->
+	
+	<bean id="hmPaymentService" class="com.hm.service.impl.HmDefaultAcceleratorPaymentService" >
+		<property name="paymentFormActionUrlStrategy" ref="paymentFormActionUrlStrategy"/>
+		<property name="hmCreateSubscriptionRequestStrategy" ref="hmCreateSubscriptionRequestStrategy"/>
+		<property name="clientReferenceLookupStrategy" ref="clientReferenceLookupStrategy"/>
+		<property name="paymentDataConverter" ref="paymentDataConverter"/>				
+		<property name="paymentResponseInterpretation" ref="paymentResponseInterpretationStrategy"/>
+		<!-- <property name="hopPaymentResponseInterpretation" ref="hopPaymentResponseInterpretationStrategy"/> -->
+		<property name="createSubscriptionResultValidationStrategy" ref="createSubscriptionResultValidationStrategy"/>
+		<property name="signatureValidationStrategy" ref="signatureValidationStrategy"/>
+		<property name="modelService" ref="modelService"/>
+		<property name="hmPaymentTransactionStrategy" ref="hmPaymentTransactionStrategy"/>
+		<property name="hmCreditCardPaymentInfoCreateStrategy" ref="hmCreditCardPaymentInfoCreateStrategy"/>
+		<property name="hmCreditCardPaymentSubscriptionDao" ref="hmCreditCardPaymentSubscriptionDao"/>
+		<property name="hmPaymentFormActionUrlStrategy" ref="hmPaymentFormActionUrlStrategy"/>			
+	</bean>	
+	
+	<bean id="hmCustomerAccountService" class="com.hm.service.impl.HmDefaultCustomerAccountService">
+		<property name="modelService" ref="modelService"/>		
+	</bean>
+	
+	<bean id="hmsPaymentService" class="com.hm.service.impl.HmsDefaultPaymentServiceImpl">
+	     <property name="commonI18NService" ref="commonI18NService"/>
+	     <property name="modelService" ref="modelService"/>
+	     <property name="hmCardPaymentService" ref="hmCardPaymentService"/>
+	     <property name="hmConfiguration" ref="hmConfiguration"/>
+	     <property name="hmRequestFactory" ref="hmRequestFactory"/>	  
+	     <property name="userService" ref="userService"/>	    
+    </bean>
+    
+    <bean id="hmCommerceCheckoutService" class="com.hm.service.impl.HmDefaultCommerceCheckoutService">
+        <property name="hmCommercePaymentProviderStrategy" ref="hmCommercePaymentProviderStrategy"/>
+        <property name="hmCommercePaymentAuthorizationStrategy" ref="hmCommercePaymentAuthorizationStrategy"/>
+    </bean> 
+    
+    <bean id="hmCardPaymentService" class="com.hm.service.impl.HmDefaultCardPaymentServiceImpl">
+        <property name="commandFactoryRegistry" ref="commandFactoryRegistry"/>
+        <property name="hmRequestFactory" ref="hmRequestFactory"/>
+        <property name="hmConfiguration" ref="hmConfiguration"/>
+    </bean>
+    
+    <bean id="hmConfiguration" class="com.hm.configuration.HmConfiguration">
+    </bean> 
+	
+	<!-- End Service Integration -->
+	
+	<!-- Strategy Integration -->
+	
+	<bean id="hmCreateSubscriptionRequestStrategy" class="com.hm.strategies.impl.HmDefaultCreateSubscriptionRequestStrategy">
+		<property name="cartService" ref="cartService"/>
+		<property name="customerBillToDataConverter" ref="customerBillToDataConverter"/>
+		<property name="customerShipToDataConverter" ref="customerShipToDataConverter"/>
+		<property name="customerEmailResolutionService" ref="customerEmailResolutionService"/>		
+		<property name="paymentInfoDataConverter" ref="paymentInfoDataConverter"/>
+		<property name="siteConfigService" ref="siteConfigService"/>		
+		<property name="hostedOrderPageVersion" value="7"/>
+	</bean>
+	
+	<bean id="hmCreditCardPaymentInfoCreateStrategy" class="com.hm.strategies.impl.HmDefaultCreditCardPaymentInfoCreateStrategy">
+    	<property name="modelService" ref="modelService"/>
+    	<property name="commonI18NService" ref="commonI18NService"/>
+    	<property name="customerEmailResolutionService" ref="customerEmailResolutionService"/>
+    	<property name="userService" ref="userService"/>
+    </bean>
+    
+    <bean id="hmPaymentTransactionStrategy" class="com.hm.strategies.impl.HmDefaultPaymentTransactionStrategy">
+        <property name="modelService" ref="modelService"/>
+        <property name="commerceCheckoutService" ref="commerceCheckoutService"/>
+        <property name="hmsPaymentService" ref="hmsPaymentService"/> 
+        <property name="hmCommerceCheckoutService" ref="hmCommerceCheckoutService"/>         
+    </bean>
+    
+    <bean id="hmCommercePaymentAuthorizationStrategy" class="com.hm.strategies.impl.HmDefaultCommercePaymentAuthorizationStrategy">
+        <property name="generateMerchantTransactionCodeStrategy" ref="generateMerchantTransactionCodeStrategy"/>
+        <property name="i18nService" ref="i18nService"/>
+        <property name="hmsPaymentService" ref="hmsPaymentService"/>        
+        <property name="modelService" ref="modelService"/>
+        <property name="authorizePaymentHooks" ref="authorizePaymentHooks"/>
+        <property name="configurationService" ref="configurationService"/>      
+    </bean>
+    
+    <bean id="hmCommercePaymentProviderStrategy" class="com.hm.strategies.impl.HmDefaultCommercePaymentProviderStrategy">
+        <property name="baseStoreService" ref="baseStoreService"/>        
+    </bean>
+    
+    <bean id="hmPaymentFormActionUrlStrategy" class="com.hm.strategies.impl.HmDefaultPaymentFormActionUrlStrategy">
+        <property name="baseSiteService" ref="baseSiteService"/>  
+        <property name="siteBaseUrlResolutionService" ref="siteBaseUrlResolutionService"/>  
+        <property name="siteConfigService" ref="siteConfigService"/>        
+    </bean>
+	
+	<!-- End Strategy Integration -->
+	
+	<!-- Dao Integration -->
+	<bean id="hmCreditCardPaymentSubscriptionDao" parent="abstractItemDao" class="com.hm.dao.impl.HmDefaultCreditCardPaymentSubscriptionDao">
+    </bean>
+    <!-- End Dao Integration -->
+    
+    <!-- Factory Integration -->
+    
+    <bean id="hmRequestFactory" class="com.hm.factory.HmRequestFactory">   
+    </bean> 
+    
+    <!-- Used for commands triggered by order-process -->
+    <bean name="hmCommandFactory" class="de.hybris.platform.payment.commands.factory.impl.DefaultCommandFactoryImpl" >
+        <property name="paymentProvider" value="CyberSource"/>
+        <property name="commands">
+            <map>
+                <entry>
+                    <key>
+                        <value type="java.lang.Class">de.hybris.platform.payment.commands.CaptureCommand</value>
+                    </key>
+                    <bean class="com.hm.commands.HmCaptureCommand">                        
+                        <property name="hmsPaymentService" ref="hmsPaymentService"/>
+                    </bean>
+                </entry>                        
+            </map>
+        </property>
+    </bean>
+    
+    <!-- End Factory Integration -->
+    
+    <!-- Fulfilmentprocess Action Order -->
+    <bean id="takePaymentAction" class="com.hm.fulfilmentprocess.actions.order.HmTakePaymentAction"  parent="abstractAction">
+		<!-- <property name="paymentService" ref="paymentService"/> -->
+		<property name="hmsPaymentService" ref="hmsPaymentService"/>
+    </bean>
+	<!-- End Fulfilmentprocess Action Order -->
+</beans>
