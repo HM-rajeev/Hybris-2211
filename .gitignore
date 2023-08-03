@@ -1,126 +1,93 @@
-
-# For generated extensions
-config/orbeon/config/properti
-config/tomcat/conf/catalina.p
-config/tomcat/conf/server.xml
-
-/hybris_2211/hybris/bin/custom/**/.classpath
-/hybris_2211/hybris/bin/custom/**/.classpath.bak
-/hybris_2211/hybris/bin/custom/**/.settings
-# Filename patterns to ignore
-Generated*.java
-*testclasses.xml
-*hmc.jar
-ruleset.xml
-*.log
-base.properties
-
- 
-
-*.gem
-*.rbc
-.bundle
-.config
-.yardoc
-**/.idea/*
-**/eclipsebin/*
-
- 
-
-# Package Files #
+########################
+# Java generated files #
+########################
+*.class
+*.ear
 *.jar
 *.war
-*.ear
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
- 
+##########
+# Hybris #
+##########
+bin/*
+!bin/custom/
+gensrc/
+jalo/
+build.xml
+velocity.log
+hmc.xsd
+beans.xsd
+items.xsd
+extensioninfo.xsd
+platformhome.properties
+*-testclasses.xml
+*webtestclasses.xml
+ruleset.xml
+classes/
+testreport/
 
-### Java template
-*.class
+###############
+# Hybris Data #
+###############
+data
+log
+lib
+roles
+temp
 
- 
+#########################
+# Maven generated files #
+#########################
+target/
 
-### Eclipse template
+######################
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
 
- 
-
-.metadata
-tmp/
-/hybris_2211/tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-#.settings/
-.loadpath
-.recommenders
-
- 
-
-# Eclipse Core
+#################
+# Editors Files #
+#################
+.classpath
+.vscode
+*.sublime-project
+*.sublime-workspace
 .project
+.settings
+eclipsebin
+.idea
+idea-module-files/
+.externalToolBuilders
+.springBeans
+.pmd
+.springBeans*
+.classpath.bak*
 
- 
+##############
+# Diff Files #
+##############
+*.orig
 
-# External tool builders
-#.externalToolBuilders/
+######################
+# Editing temp files #
+######################
+*~
+*#
 
- 
+###########################
+# Other unnecessary files #
+###########################
+.svn
+.env
+build
+.sonar
 
-# Workspace
-/workspace
-/hybris_2211/workspace
-
- 
-
-## Plugin-specific files:
-
- 
-
-# IntelliJ
-/hybris_2211/out/
-
- 
-
-#**/generatedVariables.js
-#**/generatedVariables.tag
-**/build.xml
-**/eclipsebin
-**/classes
-**/gensrc/**
-**/platformhome.properties
-**/extensioninfo.xsd
-**/testclasses$
-**/hmc/bin
-**/resources/beans.xsd
-**/resources/hmc.xsd
-**/resources/items.xsd
-**/lib/*.jar
-**/lib/.lastupdate
-**/*-testclasses.xml
-**/*-webtestclasses.xml
-**/jalo/**
-**/jalo/*
-**/jalo/
-**/.springBeans*
-**/Generated*
-
-
-
- 
-
-#  Addon specific copy folders
-**/_ui/addons
-**/views/addons
-**/tld/addons
-**/tags/addons
-**/messages/addons
-**/lib/addons
-**/web/addonsrc
-**/_ui-src/addons
-**/web/addontestsrc
-**/web/commonwebsrc/*/
-**/web/webroot/WEB-INF/lib/addon-*
-wro_addons.xml
-
-
-has context menu
+##############
+# Exceptions #
+##############
+# !xxx.jar
