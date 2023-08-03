@@ -32,6 +32,9 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private static final String IMPORT_HM_ELECTRONICS = "importhmElectronics";
 	private static final String IMPORT_HM_ELECTRONICS_SAMPLEDATA = "importHmElectronicsSampledata";
 	private static final String IMPORT_HM_CONTENT_CATALOG = "importhmContentCatalog";
+	private static final String IMPORT_HM_PRODUCT_CATALOG = "importhmProductCatalog";
+	private static final String IMPORT_HM_PRODUCT_CATALOG_MULTI_D = "importhmProductCatalogmultid";
+	private static final String IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA = "importhmProductCatalogsampledata";
 
 
 	private CoreDataImportService coreDataImportService;
@@ -52,7 +55,9 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_ELECTRONICS, "import hm Electronics", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_ELECTRONICS_SAMPLEDATA, "import Hm Electronics Sample data", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CONTENT_CATALOG, "import hm Content Catalog", true));
-
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG, "import hm Product Catalog", true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_MULTI_D, "import hm Product Catalog multi d", true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA, "import hm Product Catalog Sample Data",true));
 		// Add more Parameters here as you require
 
 		return params;
@@ -147,7 +152,72 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 
 
 		}
+		
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_PRODUCT_CATALOG))
+		{
+			importImpexFile(context, "/hmstorefront/import/coredata/productCatalogs/hmProductCatalog/catalog.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/productCatalogs/hmProductCatalog/catalog_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/productCatalogs/hmProductCatalog/catalog_de.impex");
+		}
 
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_PRODUCT_CATALOG_MULTI_D))
+		{
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products_en.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products_de.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-classifications.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-classifications_en.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-media.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-pos-stocklevels.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-prices.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-stock-levels.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/multi-d/dimension-products-tax.impex");
+
+		}
+
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA))
+		{
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories_de.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories-classifications.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories-classifications_en.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories-classifications_de.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/categories-media.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/classifications-units.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products_de.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-classifications.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-classifications_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-futurestock.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-media.impex");
+			importImpexFile(context,
+					"/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-pos-stocklevels.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-prices.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-relations.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-stocklevels.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-tax.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/suppliers.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/suppliers_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/suppliers_de.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-media.impex");
+		}
 
 	}
 
