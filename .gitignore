@@ -33,7 +33,7 @@ testreport/
 ###############
 data
 log
-lib
+#lib
 roles
 temp
 
