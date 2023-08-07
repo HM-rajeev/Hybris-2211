@@ -6,7 +6,7 @@
 #
 
 $productCatalog=hmProductCatalog
-$classificationCatalog=HmClassification
+$classificationCatalog=HMClassification
 $currencies=JPY,USD
 $net=false
 $storeUid=hm

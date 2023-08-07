@@ -35,6 +35,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private static final String IMPORT_HM_PRODUCT_CATALOG = "importhmProductCatalog";
 	private static final String IMPORT_HM_PRODUCT_CATALOG_MULTI_D = "importhmProductCatalogmultid";
 	private static final String IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA = "importhmProductCatalogsampledata";
+	private static final String IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA = "importhmContentCatalogSampledata";
+
 
 
 	private CoreDataImportService coreDataImportService;
@@ -58,6 +60,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG, "import hm Product Catalog", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_MULTI_D, "import hm Product Catalog multi d", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA, "import hm Product Catalog Sample Data",true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA, "import hm Content Catalog Sample Data", true));
+
 		// Add more Parameters here as you require
 
 		return params;
@@ -108,19 +112,20 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/searchservices.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/searchservicestrigger.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site-responsive_en.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site_de.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site-responsive.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site-responsive_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site-responsive_de.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/solr.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/solr_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/solr_de.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/solrtrigger.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store_de.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store-responsive.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store-responsive_en.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store_en.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site-responsive_de.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/site_de.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/solr_de.impex");
-			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store_de.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/stores/hmElectronics/store-responsive_de.impex");
 
 		}
@@ -152,6 +157,18 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 
 
 		}
+
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA))
+		{
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-content.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-content_de.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-content_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-responsive-content.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-responsive-content_de.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/contentCatalogs/hmContentCatalog/cms-responsive-content_en.impex");
+
+		}
+
 		
 		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_PRODUCT_CATALOG))
 		{
@@ -159,6 +176,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 			importImpexFile(context, "/hmstorefront/import/coredata/productCatalogs/hmProductCatalog/catalog_en.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/productCatalogs/hmProductCatalog/catalog_de.impex");
 		}
+
+
 
 		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_PRODUCT_CATALOG_MULTI_D))
 		{

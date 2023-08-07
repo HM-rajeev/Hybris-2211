@@ -1,12 +1,12 @@
 # -----------------------------------------------------------------------
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-# -----------------------------------------------------F------------------
+# -----------------------------------------------------------------------
 #
 # Add additional sample solr index configuration
 # - indexed properties for the classification features that we want to index
 #
-$classSystemVersion=systemVersion(catalog(id[default='HmClassification']),version[default='1.0'])
-$classCatalogVersion=catalogVersion(catalog(id[default='HmClassification']),version[default='1.0'])
+$classSystemVersion=systemVersion(catalog(id[default='HMClassification']),version[default='1.0'])
+$classCatalogVersion=catalogVersion(catalog(id[default='HMClassification']),version[default='1.0'])
 $classAttribute=classificationAttribute(code,$classSystemVersion)
 $classClass=classificationClass(code,$classCatalogVersion)
 $classAttributeAssignment=classAttributeAssignment($classClass,$classAttribute,$classSystemVersion)
@@ -45,20 +45,20 @@ INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=tru
 
 
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);sortableType(code);currency[default=false];localized[default=false];multiValue[default=false];facet[default=false];facetType(code);facetSort(code);priority;visible;fieldValueProvider;customFacetSortProvider;rangeSets(name);$classAttributeAssignment
-;hmProductType;Megapixel, 63          ;double;; ;    ; ;true;MultiSelectOr;Custom;1000;true;commerceClassificationPropertyValueProvider;numericFacetSortProviderDesc;MegaPixelRange;57:::Megapixel, 63::::
-;hmProductType;Mounting, 1867         ;string;; ;true; ;true;Refine;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;634:::Mounting, 1867::::
-;hmProductType;Colour of product, 1766;string;; ;true; ;true;MultiSelectOr;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;3856:::Colour of product, 1766::::
-;hmProductType;Lens type, 472   ;string;; ;true;true;true;MultiSelectOr;Alpha;1000;true;classificationPropertySplitValueProvider;;;1094:::Lens type, 472::::
-;hmProductType;Resolution, 80         ;string;; ;    ; ;true;Refine;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;631:::Resolution, 80::::
+;electronicsProductType;Megapixel, 63          ;double;; ;    ; ;true;MultiSelectOr;Custom;1000;true;commerceClassificationPropertyValueProvider;numericFacetSortProviderDesc;MegaPixelRange;57:::Megapixel, 63::::
+;electronicsProductType;Mounting, 1867         ;string;; ;true; ;true;Refine;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;634:::Mounting, 1867::::
+;electronicsProductType;Colour of product, 1766;string;; ;true; ;true;MultiSelectOr;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;3856:::Colour of product, 1766::::
+;electronicsProductType;Lens type, 472   ;string;; ;true;true;true;MultiSelectOr;Alpha;1000;true;classificationPropertySplitValueProvider;;;1094:::Lens type, 472::::
+;electronicsProductType;Resolution, 80         ;string;; ;    ; ;true;Refine;Alpha;1000;true;commerceClassificationPropertyValueProvider;;;631:::Resolution, 80::::
 
 # Import classification features
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);localized[default=true];multiValue[default=false];fieldValueProvider;$classAttributeAssignment
-;hmProductType;feature-size    ;text;true;false;commerceClassificationPropertyValueProvider;622:::Size, 1147::::
-;hmProductType;feature-videoCap;text;true;false;commerceClassificationPropertyValueProvider;622:::Video memory capacity, 5167::::
-;hmProductType;feature-aperture;text;true;false;commerceClassificationPropertyValueProvider;622:::Aperture setting, 5775::::
-;hmProductType;feature-picMode ;text;true;true;commerceClassificationPropertyValueProvider;622:::Picture mode, 2030::::
-;hmProductType;feature-memCards;text;true;false;commerceClassificationPropertyValueProvider;42:::Compatible memory cards, 730::::
-;hmProductType;feature-display ;text;true;false;commerceClassificationPropertyValueProvider;41:::Display, 83::::
+;electronicsProductType;feature-size    ;text;true;false;commerceClassificationPropertyValueProvider;622:::Size, 1147::::
+;electronicsProductType;feature-videoCap;text;true;false;commerceClassificationPropertyValueProvider;622:::Video memory capacity, 5167::::
+;electronicsProductType;feature-aperture;text;true;false;commerceClassificationPropertyValueProvider;622:::Aperture setting, 5775::::
+;electronicsProductType;feature-picMode ;text;true;true;commerceClassificationPropertyValueProvider;622:::Picture mode, 2030::::
+;electronicsProductType;feature-memCards;text;true;false;commerceClassificationPropertyValueProvider;42:::Compatible memory cards, 730::::
+;electronicsProductType;feature-display ;text;true;false;commerceClassificationPropertyValueProvider;41:::Display, 83::::
 
 # Show the classification features in the product lister
 INSERT_UPDATE ClassAttributeAssignment;$classClass[unique=true];$classAttribute[unique=true];$classSystemVersion[unique=true];listable
