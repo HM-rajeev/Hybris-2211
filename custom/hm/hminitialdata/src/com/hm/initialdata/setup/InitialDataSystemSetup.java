@@ -36,7 +36,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private static final String IMPORT_HM_PRODUCT_CATALOG_MULTI_D = "importhmProductCatalogmultid";
 	private static final String IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA = "importhmProductCatalogsampledata";
 	private static final String IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA = "importhmContentCatalogSampledata";
-
+	private static final String IMPORT_HM_COMMON = "importhmCommon";
 
 
 	private CoreDataImportService coreDataImportService;
@@ -61,7 +61,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_MULTI_D, "import hm Product Catalog multi d", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA, "import hm Product Catalog Sample Data",true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA, "import hm Content Catalog Sample Data", true));
-
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_COMMON, "import hm Common",
+				true));
 		// Add more Parameters here as you require
 
 		return params;
@@ -134,15 +135,15 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		 */
 		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_ELECTRONICS_SAMPLEDATA))
 		{
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/consents.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/consents_en.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/jobs.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/points-of-service.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/points-of-service-media.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/points-of-service_en.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/solr.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/solr_en.impex");
-			importImpexFile(context, "/hmstorefront/import/sampledata/store/hmelectronics/warehouses.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/consents.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/consents_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/jobs.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/points-of-service.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/points-of-service-media.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/points-of-service_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/solr.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/solr_en.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/warehouses.impex");
 
 		}
 
@@ -236,6 +237,12 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/suppliers_en.impex");
 			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/suppliers_de.impex");
 			importImpexFile(context, "/hmstorefront/import/sampledata/productCatalogs/hmProductCatalog/products-media.impex");
+		}
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_COMMON))
+		{
+			importImpexFile(context, "/hmstorefront/import/coredata/common/themes.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/themes_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/themes_de.impex");
 		}
 
 	}
