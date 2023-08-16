@@ -117,6 +117,7 @@
     </bean>
     
     <bean id="hmConfiguration" class="com.hm.configuration.HmConfiguration">
+		<property name="configurationService" ref="configurationService"/>
     </bean> 
 	
 	<!-- End Service Integration -->
