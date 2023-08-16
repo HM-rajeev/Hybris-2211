@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
+--><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
+           
+    
+    <extension abstractclassprefix="Generated" classprefix="Hmwebservices" managername="HmwebservicesManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="hmwebservices" usemaven="false">
+                               
+      
+        
+        <requires-extension name="webservicescommons"/>
+        <requires-extension name="hmfacades"/>
+                         
+       
+      
+        
+        <coremodule generated="true" manager="com.hm.jalo.HmwebservicesManager" packageroot="com.hm"/>
+                      
+        
+        <webmodule jspcompile="false" webroot="/hmwebservices"/>
+                					
+		
+        
+        	
+
+   
+    
+    </extension>
+              
+
+
+</extensioninfo>

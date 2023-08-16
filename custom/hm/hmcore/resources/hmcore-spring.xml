@@ -538,4 +538,13 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+	
+	<alias name="guestDao" alias="guestDao"/>
+	<bean id="guestDao" class="com.hm.core.dao.impl.GuestDaoImpl">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+	
+	<alias name="guestService" alias="guestService"/>
+	<bean id="guestService" class="com.hm.core.services.impl.GuestServiceImpl"/>
 </beans>
