@@ -19,7 +19,7 @@ $productResource=jar:de.hybris.platform.electronicsstore.constants.Electronicsst
 $jarResourceCms=jar:de.hybris.platform.electronicsstore.constants.ElectronicsstoreConstants&/hmstorefront/import/sampledata/cockpits/cmscockpit
 
 # CMS Site Settings
-INSERT_UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV);defaultPreviewCatalog(id)
+UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV);defaultPreviewCatalog(id)
 ;hm;575;2053367;$productCatalog
 
 # Site Logo
@@ -265,7 +265,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ;AccountAddressBookNavNode;;Address Book;AccountLeftNavNode;AccountManageAddressLink;AccountAddressBookNavNode
 ;AccountPaymentDetailsNavNode;;Address Book;AccountLeftNavNode;AccountManagePaymentDetailsLink;AccountPaymentDetailsNavNode
 ;AccountOrderHistoryNavNode;;Order History;AccountLeftNavNode;AccountViewOrderHistoryLink;AccountOrderHistoryNavNode
-
+;SAPCommerceNavNode;;SAP Commerce Cloud Pages;HMElectronicsNavNode;AboutSapCommerceLink,FAQLink;SAPCommerceNavNode
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];navigationNode(&nodeRef);dropDownLayout(code)
 ;;CamerasBarComponent;CamerasNavNode

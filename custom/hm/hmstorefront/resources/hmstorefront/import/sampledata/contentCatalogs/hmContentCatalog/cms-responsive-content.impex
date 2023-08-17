@@ -321,14 +321,14 @@ INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];n
 ;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
 
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
-;;ElectronicsHomepageProductCarouselComponent;Electronics Homepage Product Carousel;300938,358639,553637,816802,1934793,1382080,1981415,816780,1934406,1986316,592506;allVisible;false;ElectronicsHomepageProductCarouselComponent
+;;HMElectronicsHomepageProductCarouselComponent;Electronics Homepage Product Carousel;300938,358639,553637,816802,1934793,1382080,1981415,816780,1934406,1986316,592506;allVisible;false;HMElectronicsHomepageProductCarouselComponent
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
 ;;Section1Slot-Homepage;Section1 Slot for Homepage;true;BrandsGaloreBanner
 ;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
 ;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;CamcordersBanner,LensesBanner
 ;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;ElectronicsHomepageCarouselComponent
-;;Section3Slot-Homepage;Section3 Slot for Homepage;true;ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
+;;Section3Slot-Homepage;Section3 Slot for Homepage;true;HMElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
 ;;Section4Slot-Homepage;Section4 Slot for Homepage;true;DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
 ;;Section5Slot-Homepage;Section5 Slot for Homepage;true;NextDayDeliveryBanner
 
@@ -745,13 +745,13 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 
 ## Home section 3
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];&componentRef
-;;ElectronicsHomepageProductCarouselComponent;ElectronicsHomepageProductCarouselComponent
+;;HMElectronicsHomepageProductCarouselComponent;
 
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
-;;NewElectronicsHomepageProductCarouselComponent;What's New Electronics Homepage Product Carousel;2278102,1992693,1981415,1934796,1776948,1641905,932577;allVisible;true;NewElectronicsHomepageProductCarouselComponent
+;;NewHMElectronicsHomepageProductCarouselComponent;What's New Electronics Homepage Product Carousel;2278102,1992693,1981415,1934796,1776948,1641905,932577;allVisible;true;NewHMElectronicsHomepageProductCarouselComponent
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
-;;Section3Slot-Homepage;ElectronicsHomepageProductCarouselComponent,NewElectronicsHomepageProductCarouselComponent
+;;Section3Slot-Homepage;HMElectronicsHomepageProductCarouselComponent,NewHMElectronicsHomepageProductCarouselComponent
 
 #### Section 4
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef

@@ -176,7 +176,7 @@ UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$l
 ;;SonyDSCBannerComponent;Sony DSC-H20;1978440-Sony-DSC-H20-114081.jpg;"Perfect for serious performance in a compact design."
 
 UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
-;;ElectronicsHomepageProductCarouselComponent;Our Bestselling Products
+;;HMElectronicsHomepageProductCarouselComponent;Our Bestselling Products
 
 # Electronics Camera Accessories and Supplies Category Landing Page
 
@@ -236,7 +236,7 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 #above is the desktop data, below is the responsive data
 UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
-;;NewElectronicsHomepageProductCarouselComponent;What's New
+;;NewHMElectronicsHomepageProductCarouselComponent;What's New
 
 # Home Page Splash
 
