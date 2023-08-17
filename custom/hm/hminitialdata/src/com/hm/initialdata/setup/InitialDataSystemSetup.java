@@ -37,6 +37,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private static final String IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA = "importhmProductCatalogsampledata";
 	private static final String IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA = "importhmContentCatalogSampledata";
 	private static final String IMPORT_HM_COMMON = "importhmCommon";
+	private static final String IMPORT_HM_SITES_SAMPLEDATA = "importhmSitesSampledata";
 
 
 	private CoreDataImportService coreDataImportService;
@@ -61,8 +62,8 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_MULTI_D, "import hm Product Catalog multi d", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_SAMPLE_DATA, "import hm Product Catalog Sample Data",true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CONTENT_CATALOG_SAMPLE_DATA, "import hm Content Catalog Sample Data", true));
-		params.add(createBooleanSystemSetupParameter(IMPORT_HM_COMMON, "import hm Common",
-				true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_COMMON, "import hm Common",true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_SITES_SAMPLEDATA, "import hm Sites Sampledata",true));
 		// Add more Parameters here as you require
 
 		return params;
@@ -155,6 +156,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 			importImpexFile(context, "/hmstorefront/import/coredata/contentCatalogs/hmContentCatalog/cms-content_en.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/contentCatalogs/hmContentCatalog/cms-responsive-content.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/contentCatalogs/hmContentCatalog/cms-responsive-content_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/contentCatalogs/hmContentCatalog/delivery-modes.impex");
 
 
 		}
@@ -240,9 +242,22 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		}
 		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_COMMON))
 		{
+			importImpexFile(context, "/hmstorefront/import/coredata/common/countries.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/countries_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/delivery-modes.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/delivery-modes_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/essential-data.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/essential-data_en.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/regions.impex");
+			importImpexFile(context, "/hmstorefront/import/coredata/common/regions_en.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/common/themes.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/common/themes_en.impex");
 			importImpexFile(context, "/hmstorefront/import/coredata/common/themes_de.impex");
+		}
+		
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_SITES_SAMPLEDATA))
+		{
+			importImpexFile(context, "/hmstorefront/import/sampledata/sites/hm-standalone/user-groups.impex");
 		}
 
 	}
