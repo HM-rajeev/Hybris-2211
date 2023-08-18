@@ -31,6 +31,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	private static final String ACTIVATE_SOLR_CRON_JOBS = "activateSolrCronJobs";
 	private static final String IMPORT_HM_ELECTRONICS = "importhmElectronics";
 	private static final String IMPORT_HM_ELECTRONICS_SAMPLEDATA = "importHmElectronicsSampledata";
+	private static final String IMPORT_HM_CUSTOMERSUPPORT = "importhmCustomerSupport";
 	private static final String IMPORT_HM_CONTENT_CATALOG = "importhmContentCatalog";
 	private static final String IMPORT_HM_PRODUCT_CATALOG = "importhmProductCatalog";
 	private static final String IMPORT_HM_PRODUCT_CATALOG_MULTI_D = "importhmProductCatalogmultid";
@@ -57,6 +58,7 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		params.add(createBooleanSystemSetupParameter(ACTIVATE_SOLR_CRON_JOBS, "Activate Solr Cron Jobs", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_ELECTRONICS, "import hm Electronics", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_ELECTRONICS_SAMPLEDATA, "import Hm Electronics Sample data", true));
+		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CUSTOMERSUPPORT, "import hm CustomerSupport",true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_CONTENT_CATALOG, "import hm Content Catalog", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG, "import hm Product Catalog", true));
 		params.add(createBooleanSystemSetupParameter(IMPORT_HM_PRODUCT_CATALOG_MULTI_D, "import hm Product Catalog multi d", true));
@@ -145,6 +147,16 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/solr.impex");
 			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/solr_en.impex");
 			importImpexFile(context, "/hmstorefront/import/sampledata/stores/hmelectronics/warehouses.impex");
+
+		}
+		
+		if (this.getBooleanSystemSetupParameter(context, IMPORT_HM_CUSTOMERSUPPORT))
+		{
+			importImpexFile(context, "/hmstorefront/import/sampledata/backoffice/customersupport/customersupport-assistedservice-groups.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/backoffice/customersupport/customersupport-groups.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/backoffice/customersupport/customersupport-restrictions.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/backoffice/customersupport/customersupport-savedqueries.impex");
+			importImpexFile(context, "/hmstorefront/import/sampledata/backoffice/customersupport/customersupport-users.impex");
 
 		}
 

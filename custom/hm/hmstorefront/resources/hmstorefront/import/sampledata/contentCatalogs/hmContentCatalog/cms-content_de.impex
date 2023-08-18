@@ -125,7 +125,7 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$la
 ;;CameraAccessoriesNavNode;"Kamerazubehör und -bedarf"
 ;;CamerasNavNode;"Kameras"
 ;;DigitalCamerasNavNode;"Digitalkameras"
-;;ElectronicsNavNode;"Elektronik-Website"
+;;HMElectronicsNavNode;"Elektronik-Website"
 ;;FilmCamerasNavNode;"Filmkameras"
 ;;FlashMemoryNavNode;"Flash-Speicher"
 ;;FollowUsNavNode;"Folgen Sie uns"

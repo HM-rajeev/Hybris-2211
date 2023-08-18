@@ -69,55 +69,55 @@ INSERT_UPDATE SpecialOpeningDay;openingSchedule(code)[unique=true];date[unique=t
 
 
 INSERT_UPDATE PointOfService;name[unique=true];type(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd-MM-yyyy];$storeImage;openingSchedule(code);basestore(uid)[default=$storeUid];features(code)
-;Nakano;STORE;addr1;35,7091;139,6732;29-04-2025;electronics_store_01;$standardHours
-;Shinbashi;STORE;addr2;35,6673;139,75429;29-04-2025;electronics_store_02;$standardHours
+;Nakano;STORE;addr1;35,7091;139,6732;29-04-2025;hm_store_01;$standardHours
+;Shinbashi;STORE;addr2;35,6673;139,75429;29-04-2025;hm_store_02;$standardHours
 ;Koto;STORE;addr3;35,6923;139,8201;29-04-2025;;$standardHours
-;Misato;STORE;addr4;35,8269;139,8701;29-04-2025;electronics_store_01;$weekendHours
+;Misato;STORE;addr4;35,8269;139,8701;29-04-2025;hm_store_01;$weekendHours
 ;Matsudo;STORE;addr5;35,7982;139,93037;29-04-2025;;$standardHours
-;Ichikawa;STORE;addr6;35,7915;139,93351;29-04-2025;electronics_store_03;$weekendHours
-;Choshi;STORE;addr7;35,7409;140,8064;29-04-2025;electronics_store_01;$standardHours
-;Chiba;STORE;addr8;35,617;140,1023;29-04-2025;electronics_store_02;$weekendHours
-;Yokosuka;STORE;addr9;35,2853;139,664;29-04-2025;electronics_store_03;$standardHours
-;Tokio Cerulean Tower Tokyu Hotel;STORE;addr200;35,656347;139,69956;29-04-2025;electronics_store_01;$standardHours
-;Tokio Flexstay Nippori Inn;STORE;addr201;35,731772;139,779495;29-04-2025;electronics_store_02;$standardHours
+;Ichikawa;STORE;addr6;35,7915;139,93351;29-04-2025;hm_store_03;$weekendHours
+;Choshi;STORE;addr7;35,7409;140,8064;29-04-2025;hm_store_01;$standardHours
+;Chiba;STORE;addr8;35,617;140,1023;29-04-2025;hm_store_02;$weekendHours
+;Yokosuka;STORE;addr9;35,2853;139,664;29-04-2025;hm_store_03;$standardHours
+;Tokio Cerulean Tower Tokyu Hotel;STORE;addr200;35,656347;139,69956;29-04-2025;hm_store_01;$standardHours
+;Tokio Flexstay Nippori Inn;STORE;addr201;35,731772;139,779495;29-04-2025;hm_store_02;$standardHours
 ;Tokio Hotel Metropolitan Tokyo;STORE;addr202;35,689488;139,691706;29-04-2025;;$standardHours
-;Tokio Dormy Inn Tokyo Hatchobori;STORE;addr203;35,677017;139,782602;29-04-2025;electronics_store_01;$weekendHours
+;Tokio Dormy Inn Tokyo Hatchobori;STORE;addr203;35,677017;139,782602;29-04-2025;hm_store_01;$weekendHours
 ;Tokio Park Hotel Tokyo;STORE;addr204;35,663232;139,759646;29-04-2025;;$standardHours
-;Yokohama Sakuragicho Washington Hotel;STORE;addr205;35,443708;139,638026;29-04-2025;electronics_store_03;$weekendHours
-;Yokohama Shin Yokohama Prince Hotel;STORE;addr206;35,509817;139,61962;29-04-2025;electronics_store_01;$standardHours
-;Yokohama Comfort Hotel Yokohama Kannai;STORE;addr207;35,445721;139,638153;29-04-2025;electronics_store_02;$weekendHours
-;Yokohama Hotel New Grand;STORE;addr208;35,444763;139,649675;29-04-2025;electronics_store_03;$standardHours
-;Yokohama Hotel JAL City Kannai Yokohama;STORE;addr209;35,442422;139,646289;29-04-2025;electronics_store_01;$standardHours
-;Osaka Hilton Osaka Hotel;STORE;addr210;34,698823;135,498235;29-04-2025;electronics_store_02;$standardHours
+;Yokohama Sakuragicho Washington Hotel;STORE;addr205;35,443708;139,638026;29-04-2025;hm_store_03;$weekendHours
+;Yokohama Shin Yokohama Prince Hotel;STORE;addr206;35,509817;139,61962;29-04-2025;hm_store_01;$standardHours
+;Yokohama Comfort Hotel Yokohama Kannai;STORE;addr207;35,445721;139,638153;29-04-2025;hm_store_02;$weekendHours
+;Yokohama Hotel New Grand;STORE;addr208;35,444763;139,649675;29-04-2025;hm_store_03;$standardHours
+;Yokohama Hotel JAL City Kannai Yokohama;STORE;addr209;35,442422;139,646289;29-04-2025;hm_store_01;$standardHours
+;Osaka Hilton Osaka Hotel;STORE;addr210;34,698823;135,498235;29-04-2025;hm_store_02;$standardHours
 ;Osaka Crowne Plaza Hotel Ana Osaka;STORE;addr211;34,695732;135,499946;29-04-2025;;$standardHours
-;Osaka Ramada Osaka;STORE;addr212;34,710991;135,503345;29-04-2025;electronics_store_01;$weekendHours
+;Osaka Ramada Osaka;STORE;addr212;34,710991;135,503345;29-04-2025;hm_store_01;$weekendHours
 ;Osaka Cross Hotel Osaka;STORE;addr213;34,672004;135,501627;29-04-2025;;$standardHours
-;Osaka Best Western Hotel Fino Osaka Shinsaibashi;STORE;addr214;34,672287;135,50341;29-04-2025;electronics_store_03;$weekendHours
-;Nagoya Hilton Nagoya Hotel;STORE;addr215;35,167306;136,896583;29-04-2025;electronics_store_01;$standardHours
-;Nagoya Marriott Nagoya;STORE;addr216;35,1713;136,88265;29-04-2025;electronics_store_02;$weekendHours
-;Nagoya Crowne Plaza Ana Grand Court Nagoya;STORE;addr217;35,142854;136,899955;29-04-2025;electronics_store_03;$standardHours
-;Nagoya The Westin Nagoya Castle;STORE;addr218;35,185612;136,895657;29-04-2025;electronics_store_01;$standardHours
-;Nagoya Royal Park Inn Nagoya;STORE;addr219;35,169759;136,888639;29-04-2025;electronics_store_02;$standardHours
+;Osaka Best Western Hotel Fino Osaka Shinsaibashi;STORE;addr214;34,672287;135,50341;29-04-2025;hm_store_03;$weekendHours
+;Nagoya Hilton Nagoya Hotel;STORE;addr215;35,167306;136,896583;29-04-2025;hm_store_01;$standardHours
+;Nagoya Marriott Nagoya;STORE;addr216;35,1713;136,88265;29-04-2025;hm_store_02;$weekendHours
+;Nagoya Crowne Plaza Ana Grand Court Nagoya;STORE;addr217;35,142854;136,899955;29-04-2025;hm_store_03;$standardHours
+;Nagoya The Westin Nagoya Castle;STORE;addr218;35,185612;136,895657;29-04-2025;hm_store_01;$standardHours
+;Nagoya Royal Park Inn Nagoya;STORE;addr219;35,169759;136,888639;29-04-2025;hm_store_02;$standardHours
 ;Sapporo Ana Hotel Sapporo;STORE;addr220;43,06356;141,340771;29-04-2025;;$standardHours
-;Sapporo Best Western Hotel Sapporo Nakajima Koen;STORE;addr221;43,049611;141,345825;29-04-2025;electronics_store_01;$weekendHours
+;Sapporo Best Western Hotel Sapporo Nakajima Koen;STORE;addr221;43,049611;141,345825;29-04-2025;hm_store_01;$weekendHours
 ;Sapporo Sheraton Sapporo Hotel;STORE;addr222;43,035766;141,463343;29-04-2025;;$standardHours
-;Sapporo Hotel Resol Trinity Sapporo;STORE;addr223;43,062096;141,354376;29-04-2025;electronics_store_03;$weekendHours
-;Sapporo Hotel Sunroute Sapporo;STORE;addr224;43,069336;141,34641;29-04-2025;electronics_store_01;$standardHours
-;Kobe Hotel Monterey Amalie;STORE;addr225;34,694741;135,186095;29-04-2025;electronics_store_02;$weekendHours
-;Kobe Hotel Monterey Kobe;STORE;addr226;34,688103;135,1954;29-04-2025;electronics_store_03;$standardHours
-;Kobe Sannomiya Terminal Hotel;STORE;addr227;34,69536;135,197905;29-04-2025;electronics_store_01;$standardHours
-;Kobe Bay Sheraton Hotel and Towers;STORE;addr228;34,691381;135,274205;29-04-2025;electronics_store_02;$standardHours
+;Sapporo Hotel Resol Trinity Sapporo;STORE;addr223;43,062096;141,354376;29-04-2025;hm_store_03;$weekendHours
+;Sapporo Hotel Sunroute Sapporo;STORE;addr224;43,069336;141,34641;29-04-2025;hm_store_01;$standardHours
+;Kobe Hotel Monterey Amalie;STORE;addr225;34,694741;135,186095;29-04-2025;hm_store_02;$weekendHours
+;Kobe Hotel Monterey Kobe;STORE;addr226;34,688103;135,1954;29-04-2025;hm_store_03;$standardHours
+;Kobe Sannomiya Terminal Hotel;STORE;addr227;34,69536;135,197905;29-04-2025;hm_store_01;$standardHours
+;Kobe Bay Sheraton Hotel and Towers;STORE;addr228;34,691381;135,274205;29-04-2025;hm_store_02;$standardHours
 ;Kobe the b;STORE;addr229;34,685467;135,177774;29-04-2025;;$standardHours
-;Fukuoka Hotel Monterey La Soeur Fukuoka;STORE;addr230;33,590355;130,401716;29-04-2025;electronics_store_01;$weekendHours
+;Fukuoka Hotel Monterey La Soeur Fukuoka;STORE;addr230;33,590355;130,401716;29-04-2025;hm_store_01;$weekendHours
 ;Fukuoka Hilton Fukuoka Sea Hawk;STORE;addr231;33,594801;130,359171;29-04-2025;;$standardHours
-;Fukuoka Best Western Fukuoka Nakasu Inn;STORE;addr232;33,591846;130,408701;29-04-2025;electronics_store_03;$weekendHours
-;Fukuoka Canal City Fukuoka Washington Hotel;STORE;addr233;33,582978;130,41422;29-04-2025;electronics_store_01;$standardHours
-;Fukuoka Hotel Nikko Fukuoka;STORE;addr234;33,594882;130,418692;29-04-2025;electronics_store_02;$weekendHours
-;Kawasaki Mets Kawasaki Hotel;STORE;addr235;35,531106;139,696071;29-04-2025;electronics_store_03;$standardHours
-;Kawasaki Mets Mizonokuchi Hotel;STORE;addr236;35,599404;139,610382;29-04-2025;electronics_store_01;$standardHours
-;Kawasaki Hotel Sunroute Kawasaki;STORE;addr237;35,528984;139,700168;29-04-2025;electronics_store_02;$standardHours
+;Fukuoka Best Western Fukuoka Nakasu Inn;STORE;addr232;33,591846;130,408701;29-04-2025;hm_store_03;$weekendHours
+;Fukuoka Canal City Fukuoka Washington Hotel;STORE;addr233;33,582978;130,41422;29-04-2025;hm_store_01;$standardHours
+;Fukuoka Hotel Nikko Fukuoka;STORE;addr234;33,594882;130,418692;29-04-2025;hm_store_02;$weekendHours
+;Kawasaki Mets Kawasaki Hotel;STORE;addr235;35,531106;139,696071;29-04-2025;hm_store_03;$standardHours
+;Kawasaki Mets Mizonokuchi Hotel;STORE;addr236;35,599404;139,610382;29-04-2025;hm_store_01;$standardHours
+;Kawasaki Hotel Sunroute Kawasaki;STORE;addr237;35,528984;139,700168;29-04-2025;hm_store_02;$standardHours
 ;Kawasaki Pearl Hotel Kawasaki;STORE;addr238;35,528165;139,698782;29-04-2025;;$standardHours
-;Kawasaki Grand Hotel;STORE;addr239;35,530589;139,70279;29-04-2025;electronics_store_01;$weekendHours
+;Kawasaki Grand Hotel;STORE;addr239;35,530589;139,70279;29-04-2025;hm_store_01;$weekendHours
 
 INSERT_UPDATE Address;&addrID;streetname;streetnumber;postalcode[unique=true];town[unique=true];country(isocode);region(isocode);phone1;owner(PointOfService.name)[unique=true]
 ;addr1;Waseda Dori;13;;Tokio;JP;;+81 1988 3600;Nakano

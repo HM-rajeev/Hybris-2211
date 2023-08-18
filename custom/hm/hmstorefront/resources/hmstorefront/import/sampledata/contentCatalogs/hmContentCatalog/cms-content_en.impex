@@ -125,7 +125,7 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$la
 ;;CameraAccessoriesNavNode;"Camera Accessories & Supplies"
 ;;CamerasNavNode;"Cameras"
 ;;DigitalCamerasNavNode;"Digital Cameras"
-;;ElectronicsNavNode;"Electronics Site"
+;;HMElectronicsNavNode;"HM Electronics Site"
 ;;FilmCamerasNavNode;"Film Cameras"
 ;;FlashMemoryNavNode;"Flash Memory"
 ;;FollowUsNavNode;"Follow Us"
