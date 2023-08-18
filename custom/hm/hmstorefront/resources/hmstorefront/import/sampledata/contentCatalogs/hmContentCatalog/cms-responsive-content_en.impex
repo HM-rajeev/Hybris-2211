@@ -109,7 +109,7 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$la
 ;;BrandsNavNode;"Brands"
 ;;CameraAccessoriesNavNode;"Camera Accessories & Supplies"
 ;;DigitalCamerasNavNode;"Digital Cameras"
-;;ElectronicsNavNode;"Electronics Site"
+;;HMElectronicsNavNode;"HM Electronics Site"
 ;;FilmCamerasNavNode;"Film Cameras"
 ;;FlashMemoryNavNode;"Flash Memory"
 ;;FollowUsNavNode;"Follow Us"

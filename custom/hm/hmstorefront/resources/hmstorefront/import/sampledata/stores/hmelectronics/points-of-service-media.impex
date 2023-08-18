@@ -13,15 +13,15 @@ $medias=medias(code, $catalogVersion)
 
 # Create medias
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
-;365Wx246H;/365Wx246H/hmelectronics_store_01;$siteResource/images/storefinder/electronics_store_365x246_01.jpg;;;images
-;365Wx246H;/365Wx246H/hmelectronics_store_02;$siteResource/images/storefinder/electronics_store_365x246_02.jpg;;;images
-;365Wx246H;/365Wx246H/hmelectronics_store_03;$siteResource/images/storefinder/electronics_store_365x246_03.jpg;;;images
-;65Wx65H;/65Wx65H/hmelectronics_store_01;$siteResource/images/storefinder/electronics_store_65x65_01.jpg;;;images
-;65Wx65H;/65Wx65H/hmelectronics_store_02;$siteResource/images/storefinder/electronics_store_65x65_02.jpg;;;images
-;65Wx65H;/65Wx65H/hmelectronics_store_03;$siteResource/images/storefinder/electronics_store_65x65_03.jpg;;;images
+;365Wx246H;/365Wx246H/hm_store_01;$siteResource/images/storefinder/electronics_store_365x246_01.jpg;;;images
+;365Wx246H;/365Wx246H/hm_store_02;$siteResource/images/storefinder/electronics_store_365x246_02.jpg;;;images
+;365Wx246H;/365Wx246H/hm_store_03;$siteResource/images/storefinder/electronics_store_365x246_03.jpg;;;images
+;65Wx65H;/65Wx65H/hm_store_01;$siteResource/images/storefinder/electronics_store_65x65_01.jpg;;;images
+;65Wx65H;/65Wx65H/hm_store_02;$siteResource/images/storefinder/electronics_store_65x65_02.jpg;;;images
+;65Wx65H;/65Wx65H/hm_store_03;$siteResource/images/storefinder/electronics_store_65x65_03.jpg;;;images
 
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
-;hmelectronics_store_01;/365Wx246H/hmelectronics_store_01,/65Wx65H/hmelectronics_store_01
-;hmelectronics_store_02;/365Wx246H/hmelectronics_store_02,/65Wx65H/hmelectronics_store_02
-;hmelectronics_store_03;/365Wx246H/hmelectronics_store_03,/65Wx65H/hmelectronics_store_03
+;hm_store_01;/365Wx246H/hm_store_01,/65Wx65H/hm_store_01
+;hm_store_02;/365Wx246H/hm_store_02,/65Wx65H/hm_store_02
+;hm_store_03;/365Wx246H/hm_store_03,/65Wx65H/hm_store_03
 
