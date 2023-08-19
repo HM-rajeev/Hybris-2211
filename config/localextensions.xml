@@ -315,5 +315,6 @@
 	<extension name='hmstorefront' />
 	<extension name='hmwebservices' />
 	<extension name='hmcybersourcestorefrontaddon'/>
+	<extension name='hmstore' />
   </extensions>
 </hybrisconfig>
