@@ -1,0 +1,14 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+#
+# Import the Solr CronJob Trigger configuration for the hm Product Catalog
+#
+
+INSERT_UPDATE Trigger;cronJob(code)[unique=true];second;minute;hour;day;month;year;relative;active;maxAcceptableDelay
+
+# Run the full-hmIndex-cronJob at 3:05 AM every day
+;full-hmIndex-cronJob;0;5;3;-1;-1;-1;false;false;-1
+
+# Run the update-hmIndex-cronJob every 1 minutes
+;update-hmIndex-cronJob;0;1;-1;-1;-1;-1;true;false;-1
