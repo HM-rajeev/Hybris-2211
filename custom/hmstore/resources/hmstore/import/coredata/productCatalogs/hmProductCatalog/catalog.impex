@@ -6,7 +6,7 @@
 #
 
 $productCatalog=hmProductCatalog
-$classificationCatalog=hmClassification
+$classificationCatalog=HmClassification
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $languages=ja,en,de,zh
 

@@ -316,5 +316,6 @@
 	<extension name='hmwebservices' />
 	<extension name='hmcybersourcestorefrontaddon'/>
 	<extension name='hmstore' />
+	<extension name='spartacussampledata' />
   </extensions>
 </hybrisconfig>
