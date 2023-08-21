@@ -53,7 +53,7 @@ Thumbs.db
 #################
 # Editors Files #
 #################
-.classpath
+#.classpath
 .vscode
 *.sublime-project
 *.sublime-workspace
