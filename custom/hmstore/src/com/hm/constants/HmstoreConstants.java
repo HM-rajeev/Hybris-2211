@@ -6,7 +6,7 @@ package com.hm.constants;
 /**
  * Global class for all Hmstore constants. You can add global constants for your extension into this class.
  */
-public final class HmstoreConstants extends GeneratedHmstoreConstants
+public final class HmstoreConstants 
 {
 	public static final String EXTENSIONNAME = "hmstore";
 
