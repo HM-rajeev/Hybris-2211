@@ -38,7 +38,7 @@ public class SpaSampleDataImportService extends DefaultAddonSampleDataImportServ
 	@Override
 	protected void importContentCatalog(final SystemSetupContext context, final String importRoot, final String catalogName)
 	{
-		if (catalogName.equals("electronics") || catalogName.equals("powertools") || catalogName.equals("apparel-uk"))
+		if (catalogName.equals("electronics") || catalogName.equals("powertools") || catalogName.equals("apparel-uk")|| catalogName.equals("hm"))
 		{
 			// 1- create new catalog
 			importImpexFile(context, importRoot + "/contentCatalogs/" + catalogName + "ContentCatalog/catalog.impex", false);
@@ -64,7 +64,7 @@ public class SpaSampleDataImportService extends DefaultAddonSampleDataImportServ
 		// 4- import content catalog from impex
 		super.importContentCatalog(context, importRoot, catalogName);
 
-		if (catalogName.equals("electronics") || catalogName.equals("powertools") || catalogName.equals("apparel-uk"))
+		if (catalogName.equals("electronics") || catalogName.equals("powertools") || catalogName.equals("apparel-uk") || catalogName.equals("hm"))
 		{
 			// 5- import additional sample data
 			importAdditionalContentData(context, catalogName, importRoot);
