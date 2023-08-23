@@ -2,7 +2,8 @@
 <!--
  Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
-                                                                                                                                                                                                                                                                                                	
+                                                                                                                                                                                                                                                                                                    	
+    
     
     
     
@@ -75,7 +76,7 @@
     
     
     <extension abstractclassprefix="Generated" classprefix="HmStorefront" name="hmstorefront" usemaven="false">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
         
         
         
@@ -149,29 +150,27 @@
         
         
         
+        
+        <requires-extension name="hmcybersourcestorefrontaddon"/>
         <requires-extension name="ysapproductconfigaddon"/>
-                                
-        
-        
-        <requires-extension name="xyformsstorefrontcommons"/>
                                         
         
         
         
-        <requires-extension name="xyformssamples"/>
+        <requires-extension name="xyformsstorefrontcommons"/>
                                                 
         
         
         
         
-        <requires-extension name="timedaccesspromotionenginesamplesaddon"/>
+        <requires-extension name="xyformssamples"/>
                                                         
         
         
         
         
         
-        <requires-extension name="timedaccesspromotionengineaddon"/>
+        <requires-extension name="timedaccesspromotionenginesamplesaddon"/>
                                                                 
         
         
@@ -179,7 +178,7 @@
         
         
         
-        <requires-extension name="textfieldconfiguratortemplateaddon"/>
+        <requires-extension name="timedaccesspromotionengineaddon"/>
                                                                         
         
         
@@ -188,7 +187,7 @@
         
         
         
-        <requires-extension name="stocknotificationaddon"/>
+        <requires-extension name="textfieldconfiguratortemplateaddon"/>
                                                                                 
         
         
@@ -198,7 +197,7 @@
         
         
         
-        <requires-extension name="smarteditaddon"/>
+        <requires-extension name="stocknotificationaddon"/>
                                                                                         
         
         
@@ -209,7 +208,7 @@
         
         
         
-        <requires-extension name="selectivecartsplitlistaddon"/>
+        <requires-extension name="smarteditaddon"/>
                                                                                                 
         
         
@@ -221,7 +220,7 @@
         
         
         
-        <requires-extension name="profiletagaddon"/>
+        <requires-extension name="selectivecartsplitlistaddon"/>
                                                                                                         
         
         
@@ -234,7 +233,7 @@
         
         
         
-        <requires-extension name="personalizationyprofilesampledataaddon"/>
+        <requires-extension name="profiletagaddon"/>
                                                                                                                 
         
         
@@ -248,7 +247,7 @@
         
         
         
-        <requires-extension name="personalizationsampledataaddon"/>
+        <requires-extension name="personalizationyprofilesampledataaddon"/>
                                                                                                                         
         
         
@@ -263,7 +262,7 @@
         
         
         
-        <requires-extension name="personalizationaddon"/>
+        <requires-extension name="personalizationsampledataaddon"/>
                                                                                                                                 
         
         
@@ -279,7 +278,7 @@
         
         
         
-        <requires-extension name="pcmbackofficesamplesaddon"/>
+        <requires-extension name="personalizationaddon"/>
                                                                                                                                         
         
         
@@ -296,7 +295,7 @@
         
         
         
-        <requires-extension name="orderselfserviceaddon"/>
+        <requires-extension name="pcmbackofficesamplesaddon"/>
                                                                                                                                                 
         
         
@@ -314,7 +313,7 @@
         
         
         
-        <requires-extension name="ordermanagementaddon"/>
+        <requires-extension name="orderselfserviceaddon"/>
                                                                                                                                                         
         
         
@@ -333,7 +332,7 @@
         
         
         
-        <requires-extension name="notificationaddon"/>
+        <requires-extension name="ordermanagementaddon"/>
                                                                                                                                                                 
         
         
@@ -353,7 +352,7 @@
         
         
         
-        <requires-extension name="multicountrysampledataaddon"/>
+        <requires-extension name="notificationaddon"/>
                                                                                                                                                                         
         
         
@@ -374,7 +373,7 @@
         
         
         
-        <requires-extension name="merchandisingstorefrontsampledataaddon"/>
+        <requires-extension name="multicountrysampledataaddon"/>
                                                                                                                                                                                 
         
         
@@ -396,7 +395,7 @@
         
         
         
-        <requires-extension name="merchandisingaddon"/>
+        <requires-extension name="merchandisingstorefrontsampledataaddon"/>
                                                                                                                                                                                         
         
         
@@ -419,7 +418,7 @@
         
         
         
-        <requires-extension name="eventtrackingwsaddon"/>
+        <requires-extension name="merchandisingaddon"/>
                                                                                                                                                                                                 
         
         
@@ -443,7 +442,7 @@
         
         
         
-        <requires-extension name="customerticketingaddon"/>
+        <requires-extension name="eventtrackingwsaddon"/>
                                                                                                                                                                                                         
         
         
@@ -468,7 +467,7 @@
         
         
         
-        <requires-extension name="customerinterestsaddon"/>
+        <requires-extension name="customerticketingaddon"/>
                                                                                                                                                                                                                 
         
         
@@ -494,7 +493,7 @@
         
         
         
-        <requires-extension name="customercouponsamplesaddon"/>
+        <requires-extension name="customerinterestsaddon"/>
                                                                                                                                                                                                                         
         
         
@@ -521,7 +520,7 @@
         
         
         
-        <requires-extension name="customercouponaddon"/>
+        <requires-extension name="customercouponsamplesaddon"/>
                                                                                                                                                                                                                                 
         
         
@@ -549,7 +548,7 @@
         
         
         
-        <requires-extension name="consignmenttrackingaddon"/>
+        <requires-extension name="customercouponaddon"/>
                                                                                                                                                                                                                                         
         
         
@@ -578,7 +577,7 @@
         
         
         
-        <requires-extension name="configurablebundleaddon"/>
+        <requires-extension name="consignmenttrackingaddon"/>
                                                                                                                                                                                                                                                 
         
         
@@ -608,7 +607,7 @@
         
         
         
-        <requires-extension name="chineseaddressaddon"/>
+        <requires-extension name="configurablebundleaddon"/>
                                                                                                                                                                                                                                                         
         
         
@@ -639,7 +638,7 @@
         
         
         
-        <requires-extension name="captchaaddon"/>
+        <requires-extension name="chineseaddressaddon"/>
                                                                                                                                                                                                                                                                 
         
         
@@ -671,7 +670,7 @@
         
         
         
-        <requires-extension name="assistedserviceyprofileaddon"/>
+        <requires-extension name="captchaaddon"/>
                                                                                                                                                                                                                                                                         
         
         
@@ -704,7 +703,7 @@
         
         
         
-        <requires-extension name="assistedservicestorefront"/>
+        <requires-extension name="assistedserviceyprofileaddon"/>
                                                                                                                                                                                                                                                                                 
         
         
@@ -738,7 +737,7 @@
         
         
         
-        <requires-extension name="assistedservicepromotionaddon"/>
+        <requires-extension name="assistedservicestorefront"/>
                                                                                                                                                                                                                                                                                         
         
         
@@ -773,7 +772,7 @@
         
         
         
-        <requires-extension name="assistedservicecustomerinterestsaddon"/>
+        <requires-extension name="assistedservicepromotionaddon"/>
                                                                                                                                                                                                                                                                                                 
         
         
@@ -809,7 +808,7 @@
         
         
         
-        <requires-extension name="adaptivesearchsamplesaddon"/>
+        <requires-extension name="assistedservicecustomerinterestsaddon"/>
                                                                                                                                                                                                                                                                                                         
         
         
@@ -843,7 +842,11 @@
         
         
         
-                                                                                                                                                                                                                                                                                
+        
+        
+        
+        <requires-extension name="adaptivesearchsamplesaddon"/>
+                                                                                                                                                                                                                                                                                                                
         
         
         
@@ -1933,6 +1936,40 @@
         
         
                                                                                                                                                                                                                                                                                 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                                                                                                                                                                                                                                                                                
+        
         
         
         
@@ -2003,7 +2040,8 @@
         
         
         <requires-extension name="acceleratorstorefrontcommons"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
         
         
         
@@ -2076,7 +2114,8 @@
         
         
         <requires-extension name="hmfacades"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
         
         
         
@@ -2149,7 +2188,7 @@
         
         
         <webmodule jspcompile="false" webroot="/hmstorefront"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
         
         
         
@@ -2291,8 +2330,10 @@
         
         
         
+        
         <meta key="extgen-template-extension" value="true"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		
+        
         
         
         
@@ -2365,7 +2406,8 @@
         
         
         <meta key="deprecated" value="true"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	
+    
     
     
     
@@ -2438,7 +2480,8 @@
     
     
     </extension>
-                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                    
+
 
 
 

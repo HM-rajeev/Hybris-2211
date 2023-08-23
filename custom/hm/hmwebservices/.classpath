@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="testsrc"/>
+	<classpathentry exported="true" kind="src" path="/webservicescommons"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="src" path="/platform"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="src" path="/hmfacades"/>
+	<classpathentry kind="src" path="web/src"/>
+	<classpathentry kind="src" path="gensrc"/>
+	<classpathentry kind="output" path="eclipsebin"/>
+</classpath>
